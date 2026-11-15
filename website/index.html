@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the engineering stories behind NASA Mars 2020 landing hardware with MARS REMNANTS.">
+  <meta name="theme-color" content="#17110f">
+  <title>MARS REMNANTS | Interactive Mars Hardware Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Mars Remnants home"><span class="brand-mark">MR</span><span>MARS <b>REMNANTS</b><small>INTERACTIVE HARDWARE EXPLORER</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#explorer">Explore</a><a href="#mission">Mission story</a><a href="#timeline">Timeline</a><a href="#learn">Engineering lab</a><a href="#sources">Sources</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> A MARS 2020 LANDING-SITE CASE STUDY</p>
+        <h1>THE MISSION MOVED ON.<br><em>THE HARDWARE STAYED.</em></h1>
+        <p class="hero-lede">A closer look at the machines and components that helped Perseverance reach the surface of Mars — and the engineering stories written into the landscape.</p>
+        <div class="hero-actions"><a class="button primary" href="#explorer">Explore the hardware <span>↘</span></a><a class="text-link" href="#mission">Follow the landing sequence →</a></div>
+        <div class="hero-note"><span>01 / FIELD ARCHIVE</span><span>Jezero Crater · Mars</span><span>NASA mission evidence</span></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract Mars terrain illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="planet"></div>
+        <div class="art-label label-top">MARS 2020 <b>EDL SYSTEM</b></div><div class="art-label label-bottom">JEZERO CRATER <small>Mars 2020 landing site</small></div>
+        <div class="crosshair"></div>
+      </div>
+    </section>
+    <section class="intro-strip"><div><span class="section-kicker">THE IDEA</span><h2>Every component has a story.</h2></div><p>Some parts protect. Some slow down. Some separate. Their job may last minutes — but their traces remain part of the mission record.</p></section>
+    <section class="section" id="explorer">
+      <div class="section-heading"><div><span class="section-kicker">01 / HARDWARE ARCHIVE</span><h2>Explore the landing system</h2></div><p>Choose a component to reveal its role, engineering and what happened after separation.</p></div>
+      <div class="filter-row" role="group" aria-label="Filter hardware"><button class="filter active" data-filter="all" aria-pressed="true">All components</button><button class="filter" data-filter="entry" aria-pressed="false">Entry & protection</button><button class="filter" data-filter="descent" aria-pressed="false">Descent & landing</button></div>
+      <div class="hardware-grid" id="hardwareGrid" aria-live="polite"></div>
+      <div class="detail-panel" id="detailPanel" hidden aria-live="polite"><button class="close-detail" id="closeDetail" aria-label="Close component details">×</button><p class="section-kicker" id="detailTag">COMPONENT FILE</p><h3 id="detailTitle"></h3><p id="detailText"></p><div class="detail-facts" id="detailFacts"></div><a id="detailSource" class="text-link" href="#" target="_blank" rel="noopener">Open NASA source ↗</a></div>
+    </section>
+    <section class="section mission-section" id="mission">
+      <div class="section-heading"><div><span class="section-kicker">02 / ORBITAL EVIDENCE</span><h2>One landing site. Several stories.</h2></div><p>NASA’s Mars Reconnaissance Orbiter captured the landing area from above. The annotated view identifies the major pieces of the Mars 2020 landing system.</p></div>
+      <figure class="evidence-figure"><a href="https://science.nasa.gov/resource/perseverance-and-mars-2020-spacecraft-components-on-the-surface/" target="_blank" rel="noopener"><img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/mars/downloadable_items/4/5/45707_PIA24333-annotated.png" alt="NASA annotated orbital image identifying Perseverance landing components on the Martian surface" loading="lazy"></a><figcaption><span>FIG. 01 — PIA24333 · ANNOTATED LANDING-SITE VIEW</span><span>Credit: NASA/JPL-Caltech/MSSS</span></figcaption></figure>
+      <div class="evidence-caption"><strong>Read the landscape.</strong><p>The rover is near the centre of the landing pattern. NASA describes a V-shaped debris pattern from the descent stage’s departure and identifies the separated heat shield and parachute/backshell elsewhere in the landing area. This image is evidence of relative locations; this project does not infer precise coordinates from it.</p></div>
+    </section>
+    <section class="section timeline-section" id="timeline"><div class="section-heading"><div><span class="section-kicker">03 / MISSION STORY</span><h2>From atmosphere to surface</h2></div><p>Move through the key events that made the landing possible.</p></div><div class="timeline-controls"><button id="prevStep" class="round-btn" aria-label="Previous event">←</button><span id="stepCount">01 / 05</span><button id="nextStep" class="round-btn" aria-label="Next event">→</button></div><div class="timeline-card"><div class="timeline-progress"><span id="timelineProgress"></span></div><p class="section-kicker" id="stepPhase">ENTRY</p><h3 id="stepTitle">The aeroshell meets Mars</h3><p id="stepDescription">The aeroshell protects the rover and descent stage during atmospheric entry.</p></div></section>
+    <section class="section lab-section" id="learn">
+      <div class="section-heading"><div><span class="section-kicker">04 / ENGINEERING LAB</span><h2>Understand the engineering</h2></div><p>Short explanations connect the hardware to the physics and design decisions behind a Mars landing.</p></div>
+      <div class="lab-grid"><article class="lab-card"><span class="lab-number">A</span><h3>Thermal protection</h3><p>The heat shield carries much of the intense heat generated as the entry vehicle moves through the Martian atmosphere.</p><small>ENGINEERING PRINCIPLE · ABLATIVE THERMAL PROTECTION</small></article><article class="lab-card"><span class="lab-number">B</span><h3>Parachute deceleration</h3><p>A large supersonic parachute adds drag and reduces speed before the powered descent phase.</p><small>ENGINEERING PRINCIPLE · AERODYNAMIC DRAG</small></article><article class="lab-card"><span class="lab-number">C</span><h3>Sky-crane landing</h3><p>The rocket-powered descent stage hovers and lowers the rover on nylon cords, then flies away after the rover is safely on the ground.</p><small>ENGINEERING PRINCIPLE · CONTROLLED POWERED DESCENT</small></article></div>
+      <div class="quiz"><div><span class="section-kicker">CHECK YOUR UNDERSTANDING</span><h3>What lowered Perseverance onto the surface?</h3><p>Choose one answer to test what you have learned.</p></div><div class="quiz-options" id="quizOptions"><button data-correct="false">The parachute alone</button><button data-correct="true">The rocket-powered sky crane</button><button data-correct="false">The heat shield</button></div><p class="quiz-feedback" id="quizFeedback" role="status">Select an answer to see feedback.</p></div>
+    </section>
+    <section class="section source-section" id="sources"><div class="section-heading"><div><span class="section-kicker">05 / EVIDENCE & REFERENCES</span><h2>Follow the sources</h2></div><p>Claims in this first release are based on primary NASA mission material. Read the source before extending the story.</p></div><div class="source-list">
+      <a href="https://science.nasa.gov/resource/perseverance-and-mars-2020-spacecraft-components-on-the-surface/" target="_blank" rel="noopener"><span>01</span><div><b>Perseverance and Mars 2020 Spacecraft Components on the Surface</b><small>NASA Science · PIA24333 · 22 February 2021</small></div><span>↗</span></a>
+      <a href="https://www.jpl.nasa.gov/news/press_kits/mars_2020/landing/mission/spacecraft/getting_to_mars/" target="_blank" rel="noopener"><span>02</span><div><b>Mars 2020 Perseverance Landing Press Kit — Getting to Mars</b><small>NASA Jet Propulsion Laboratory · EDL engineering</small></div><span>↗</span></a>
+      <a href="https://www.jpl.nasa.gov/images/pia24333-perseverance-and-mars-2020-spacecraft-components-on-the-surface/" target="_blank" rel="noopener"><span>03</span><div><b>PIA24333 — Perseverance and Mars 2020 Spacecraft Components</b><small>NASA/JPL Photojournal</small></div><span>↗</span></a>
+      <a href="https://science.nasa.gov/image-article/apod-2021-february-27-perseverance-landing-site-from-mars-reconnaissance-orbiter/" target="_blank" rel="noopener"><span>04</span><div><b>Perseverance Landing Site from Mars Reconnaissance Orbiter</b><small>NASA Astronomy Picture of the Day · 27 February 2021</small></div><span>↗</span></a>
+    </div><p class="disclaimer">MARS REMNANTS is an independent educational project by Team GETTAFIE 2.0. It is not an official NASA product and is not endorsed by NASA. NASA imagery is credited to its source. No NASA logo is used as project branding.</p></section>
+  </main>
+  <footer><a class="brand" href="#top"><span class="brand-mark">MR</span><span>MARS <b>REMNANTS</b><small>TEAM GETTAFIE 2.0</small></span></a><span>Built for NASA Space Apps Challenge 2026 · Independent student project</span><a href="#top">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
